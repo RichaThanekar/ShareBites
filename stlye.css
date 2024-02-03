@@ -1,0 +1,53 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+text-decoration: none;
+list-style: none;
+}
+body{
+    background: url(melanie-lim-SkMBbB9gjQc-unsplash.jpg), linear-gradient(#000000,#000000,#000000,#756a6a);
+    background-size: cover;
+}
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    padding: 28px 12%;
+    transition: all .50s ease;
+    border:solid #000000 5px;
+    border-radius: 50px;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo i{
+    color: whitesmoke;
+    font-size: 28px;
+    margin-right: 3px;
+}
+.logo span{
+    color: whitesmoke;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar a{
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 5px 0;
+    margin: 0px 30px;
+    transition: all .50s ease;
+}
