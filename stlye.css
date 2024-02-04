@@ -16,21 +16,19 @@ header{
     justify-content: center;
 }
 .header-content{
-    
     color: whitesmoke;
     text-align: center;
 }
 .header-content h2{
     font-size: 4vmin;
 }
-.line{
+/*.line{
     width: 250px;
     height: 4px;
-    background: rgb(53, 54, 136);
+    background: #353688;
     margin: 10px auto;
-    border-radius: 5px;
-    
-}
+    border-radius: 5px;  
+}*/
 .header-content h1{
     font-size: 5vmin;
     margin-top: 30px;
@@ -48,7 +46,18 @@ header{
     background: transparent;
     padding: 28px 70px;
     transition: all .50s ease;
-    
+}
+.button{
+    text-decoration: none;
+    list-style: none;
+    padding: 8px 15px;
+    border: #353688 solid 2px;
+    border-radius: 30px;
+    color: #ffffff;
+}
+.button:hover{
+    background-color: #353688;
+    transition: 0.3s ease-in;
 }
 
 .logo{
