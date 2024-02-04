@@ -7,8 +7,8 @@ text-decoration: none;
 list-style: none;
 }
 body{
-    background: url(melanie-lim-SkMBbB9gjQc-unsplash.jpg), linear-gradient(#000000,#000000,#000000,#756a6a);
-    background-size: cover;
+    background: url(melanie-lim-SkMBbB9gjQc-unsplash.jpg);
+    background-size: cover;  
 }
 header{
     position: fixed;
@@ -22,8 +22,7 @@ header{
     background: transparent;
     padding: 28px 12%;
     transition: all .50s ease;
-    border:solid #000000 5px;
-    border-radius: 50px;
+    
 }
 .logo{
     display: flex;
@@ -44,10 +43,56 @@ header{
     justify-content: space-between;
     align-items: center;
 }
-.navbar a{
+
+.navbar a {
+    color: aliceblue;
     font-size: 1.1rem;
     font-weight: 500;
     padding: 5px 0;
     margin: 0px 30px;
     transition: all .50s ease;
+}
+.navbar li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.navbar a::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    display: block;
+    margin: auto;
+    transition: 0.2s;
+}
+
+.navbar a:hover {
+    color: #0c7073; /* Change this to the color you want on hover */
+}
+
+/*.navbar a:hover::after {
+    width: 80%;
+    background-color: #756a6a; 
+}*/
+.main{
+    display: flex;
+    align-items: center;
+}
+.main a{
+    margin-right: 25px;
+    margin-left: 10px;
+    color: aliceblue;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: all .50s ease;
+}
+#menu-icon{
+    font-size: 35px;
+    color: aliceblue;
+    cursor: pointer;
+    z-index: 10001;
+    display: none;
+
 }
