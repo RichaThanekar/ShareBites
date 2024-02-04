@@ -2,15 +2,41 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
 
-text-decoration: none;
-list-style: none;
-}
-body{
-    background: url(melanie-lim-SkMBbB9gjQc-unsplash.jpg);
-    background-size: cover;  
-}
 header{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(rgb(13,13,37),rgb(13,0,0,0.75)),url(melanie-lim-SkMBbB9gjQc-unsplash.jpg);
+    background-size: cover; 
+    background-position: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    justify-content: center;
+}
+.header-content{
+    
+    color: whitesmoke;
+    text-align: center;
+}
+.header-content h2{
+    font-size: 4vmin;
+}
+.line{
+    width: 250px;
+    height: 4px;
+    background: rgb(53, 54, 136);
+    margin: 10px auto;
+    border-radius: 5px;
+    
+}
+.header-content h1{
+    font-size: 5vmin;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.navbar{
     position: fixed;
     width: 100%;
     top: 0;
@@ -20,46 +46,45 @@ header{
     align-items: center;
     justify-content: space-between;
     background: transparent;
-    padding: 28px 12%;
+    padding: 28px 70px;
     transition: all .50s ease;
     
 }
+
 .logo{
-    display: flex;
-    align-items: center;
-}
-.logo i{
-    color: whitesmoke;
-    font-size: 28px;
-    margin-right: 3px;
+    height: 100px;
+    width: 100px;
 }
 .logo span{
     color: whitesmoke;
     font-size: 1.1rem;
     font-weight: 600;
 }
-.navbar{
+.nav-links{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
 }
 
-.navbar a {
+.nav-links a {
     color: aliceblue;
     font-size: 1.1rem;
     font-weight: 500;
     padding: 5px 0;
     margin: 0px 30px;
     transition: all .50s ease;
+    text-decoration: none;
+    list-style: none;
 }
-.navbar li{
+.nav-links li{
     list-style: none;
     display: inline-block;
     padding: 8px 12px;
     position: relative;
 }
 
-.navbar a::after {
+.nav-links a::after {
     content: '';
     width: 0%;
     height: 2px;
@@ -68,7 +93,7 @@ header{
     transition: 0.2s;
 }
 
-.navbar a:hover {
+.nav-links a:hover {
     color: #0c7073; /* Change this to the color you want on hover */
 }
 
@@ -76,23 +101,33 @@ header{
     width: 80%;
     background-color: #756a6a; 
 }*/
-.main{
-    display: flex;
-    align-items: center;
-}
-.main a{
-    margin-right: 25px;
-    margin-left: 10px;
-    color: aliceblue;
-    font-size: 1.1rem;
-    font-weight: 500;
-    transition: all .50s ease;
-}
-#menu-icon{
-    font-size: 35px;
-    color: aliceblue;
-    cursor: pointer;
-    z-index: 10001;
-    display: none;
 
+.info{
+    display: flex;
+    flex-direction: column;
+    align-items: last baseline;
+    justify-content: center;
+    
+}
+
+.info h1{
+    font-size: 40px;
+    color: #ffffff;
+    padding: 10px;
+    
+}
+.info p{
+    font-size: 15px;
+    color: #ffffff; 
+    padding: 12px;
+    width: 500px;
+}
+
+h3{
+    color: #ffffff;
+    letter-spacing: 2.5px;
+}
+.p{
+    color: #fff;
+    letter-spacing: 1.5px;
 }
