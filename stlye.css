@@ -7,7 +7,7 @@
 header{
     width: 100vw;
     height: 100vh;
-    background: linear-gradient(rgb(22, 22, 54),rgba(0, 0, 0, 0.75)),url(images/bg.jpg);
+    background:url(images/bg.jpg);
     background-size: cover; 
     background-position: center;
     display: flex;
@@ -69,7 +69,6 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
 }
 
 .nav-links a {
