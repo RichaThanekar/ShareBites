@@ -205,5 +205,29 @@ h3{
       width: 100%;
     }
   }
-  
-  
+ 
+
+  .vm {
+    display: flex;
+}
+
+.vm1 {
+    display: flex;
+    align-items: center; /* Center items vertically in the first container */
+}
+.vm2{
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    margin-right: 10px; /* Add margin between icon and text */
+}
+
+.text-container {
+    flex: 1;
+}
+
+.text-container p {
+    margin-top: 0; /* Remove default top margin for the paragraph */
+}
