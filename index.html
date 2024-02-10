@@ -10,263 +10,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>ShareBites</title>
 </head>
+
 <body>
-    <style>*{
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-    }
-    
-    header{
-        width: 100vw;
-        height: 100vh;
-        background: linear-gradient(rgba(8, 58, 26, 0.75), rgba(0, 0, 0, 0.5)), url(images/bg.jpg);
-    
-        
-        background-size: cover; 
-        background-position: center;
-        display: flex;
-        flex-direction: row;
-        align-items: center; 
-        justify-content: center;
-    }
-    .header-content{
-        color: whitesmoke;
-        text-align: center;
-    }
-    .header-content h2{
-        font-size: 4vmin;
-    }
-    /*.line{
-        width: 250px;
-        height: 4px;
-        background: #353688;
-        margin: 10px auto;
-        border-radius: 5px;  
-    }*/
-    .header-content h1{
-        font-size: 5vmin;
-        margin-top: 30px;
-        margin-bottom: 30px;
-        
-    }
-    .navbar{
-        position: fixed;
-        width: 100%;
-        top: 0;
-        right: 0;
-        z-index: 1000;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        background: transparent;
-        padding: 28px 70px;
-        transition: all .50s ease;
-    }
-    .button{
-        text-decoration: none;
-        list-style: none;
-        padding: 8px 15px;
-        border: #353688 solid 2px;
-        border-radius: 30px;
-        color: #ffffff;
-    }
-    .button:hover{
-        background-color: rgb(54, 55, 135);
-        transition: 0.3s ease-in;
-    }
-    
-    .logo{
-        height: 100px;
-        width: 100px;
-    }
-    .nav-links{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    
-    .nav-links a {
-        color: aliceblue;
-        font-size: 1.1rem;
-        font-weight: 500;
-        padding: 5px 0;
-        margin: 0px 30px;
-        transition: all .50s ease;
-        text-decoration: none;
-        list-style: none;
-    }
-    .nav-links li{
-        list-style: none;
-        display: inline-block;
-        padding: 8px 12px;
-        position: relative;
-        font-family: 'Inconsolata', monospace;
-    }
-    
-    .nav-links a::after {
-        content: '';
-        width: 0%;
-        height: 2px;
-        display: block;
-        margin: auto;
-        transition: 0.2s;
-    }
-    
-    .nav-links a:hover {
-        color: #0c7073; /* Change this to the color you want on hover */
-    }
-    
-    /*.navbar a:hover::after {
-        width: 80%;
-        background-color: #756a6a; 
-    }*/
-    
-    
-    
-    h3{
-        color: #ffffff;
-        letter-spacing: 2.5px;
-    }
-    .p{
-        color: #fff;
-        letter-spacing: 1.5px;
-    }
-    
-    
-    .title{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        align-content: center;
-    }
-    .s1 img{
-        width: 600px;
-        height: 500px;
-        padding: 30px;
-    }
-    .s2 {
-        padding: 30px;
-        line-height: 25px;
-    }
-    .s2 h1{
-        text-align: center;
-        padding: 25px;
-    }
-    
-    
-    .working h1 {
-        margin-top: 20px;
-        line-height: 50px;
-        text-align: center;
-        margin-bottom: 20px;
-      }
-    .d {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        background-color: #f9f9f9;
-        padding: 20px;
-      }
-      
-      /* Card styling */
-      .working .d {
-        display: flex;
-      }
-      
-      .working .d div {
-        flex: 1;
-        padding: 20px;
-        margin: 10px;
-        background-color: #fff;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        transition: box-shadow 0.3s ease-in-out;
-        text-align: center; /* Center text in the card */
-      }
-      
-      /* Hover effect */
-      .working .d div:hover {
-        box-shadow: 3px 8px 16px rgba(8, 58, 26, 0.75);
-      }
-      
-      /* Image styling */
-      .working .d img {
-        width: 400px;
-        height: 300px;
-        border-radius: 4px; /* Optional: Add border-radius to images */
-      }
-      
-    
-      .working h2 {
-        color: #333;
-        margin-top: 10px;
-      }
-      
-      .working p {
-        color: #666;
-      }
-      
-      /* Responsive adjustments */
-      @media (max-width: 768px) {
-        .d{
-          flex-direction: column;
-        }
-      
-        .working .d div {
-          width: 100%;
-        }
-      }
-     
-    
-      .vm {
-        height: 200px;
-        display: flex;
-        justify-content: space-between;
-        background-color: #e9e9e9;
-        padding: 30px;
-      }
-      .icon {
-        margin-right: 30px; /* Add margin between icon and text */
-    }
-      .vm1,
-      .vm2 {
-        display: flex;
-        align-items: center;
-        flex: 1; /* Equal flex for both vm1 and vm2 */
-      }
-      
-      .vm1 {
-        padding-right: 15px; /* Adjusted padding */
-      }
-      
-      .vm2 {
-        padding-left: 15px; /* Adjusted padding */
-        margin-left: 15px; /* Added margin to balance space */
-      }
-      
-      .text-container {
-        flex: 1;
-      }
-      
-      .text-container p {
-        font-size: 20px;
-        margin-top: 0;
-      }
-      
-      .text-container h4 {
-        font-size: 30px;
-        font-style: italic;
-        line-height: 2;
-      }
-      
-      .vm .line {
-        width: 2px;
-        height: 100%;
-        background-color: #000000;
-      }
-      </style>
+
     <section class="navbar">
         <a href="#"><img src="images\logo.png" class="logo">
         </a>
@@ -285,7 +31,44 @@
             <h2>FIGHT HUNGER, SHARE JOY</h2>
         <div class="line"></div>
             <h1>Join ShareBites and be a FoodHero - where surplus food finds a purpose</h1>
-            <a href="#" class="button">Join Us</a>
+            <button id="show-login">Login/Register</button>
+            <div class="container" id="container">
+                <div class="form-container sign-up-container">
+                    <form action="#">
+                        <div class="close-btn">&times;</div>
+                        <h1>Sign Up</h1>
+                        <input type="text" placeholder="Restaurant's Name" />
+                        <input type="email" placeholder="Email" />
+                        <input type="password" placeholder="Password" />
+                        <button>Sign Up</button>
+                    </form>
+                </div>
+                <div class="form-container sign-in-container">
+                    <form action="#">
+                        <h1>Sign in</h1>
+                        <input type="text" placeholder="NGO's Name" />
+                        <input type="email" placeholder="Email" />
+                        <input type="password" placeholder="Password" />
+                        <a href="#">Forgot your password?</a>
+                        <button>Sign UP</button>
+                    </form>
+                </div>
+                <div class="overlay-container">
+                    <div class="overlay">
+                        <div class="overlay-panel overlay-left">
+                            <h1>I'm a NGO</h1>
+                            <p>and want to receive food</p>
+                            <button class="ghost" id="signIn">Secure Food</button>
+                        </div>
+                        <div class="overlay-panel overlay-right">
+                            <div class="close-btn">&times;</div>
+                            <h1>I'm a Restaurant</h1>
+                            <p>and want to donate food</p>
+                            <button class="ghost" id="signUp">Donate Food</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -384,4 +167,5 @@
 
 
 </body>
+<script src="script.js"></script>
 </html>
