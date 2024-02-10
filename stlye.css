@@ -518,7 +518,7 @@ input {
 /*footer*/
 .footer-distributed {
   background: linear-gradient(rgba(8, 58, 26, 0.95), rgba(0, 0, 0, 0.75)), url(https://www.nohungrychild.in/images/Hungry_child.jpg);
-  background-size: fit;
+  background-size: cover;
   background-position: center;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
   box-sizing: border-box;
