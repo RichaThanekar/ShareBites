@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Donation Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container" id="container">
+        <h1>Restaurant Dashboard</h1>
+        <div class="form-container">
+            <label for="foodType">Food Type:</label>
+            <input type="text" id="foodType">
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity">
+            <label for="pickUpTime">Pick-up Time:</label>
+            <input type="time" id="pickUpTime" class="timer">
+            <label for="location">Pick-up Location:</label> <!-- Added label for pick-up location -->
+            <input type="text" id="location"> <!-- Added input field for pick-up location -->
+        </div>
+        <div class="button-container">
+            <button onclick="addToInventory()">Add to Inventory</button>
+        </div>
+        <h2>Current Inventory</h2>
+        <ul id="inventoryList">
+            <!-- Inventory items will be displayed here dynamically -->
+        </ul>
+        <div id="totalDonated" class="total-donated"></div>
+        <canvas id="chart" width="400" height="400"></canvas>
+    </div>
+    <script src="script1.js"></script>
+</body>
+</html>
