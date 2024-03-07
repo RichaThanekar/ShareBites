@@ -47,7 +47,7 @@ header{
     align-items: center;
     justify-content: space-between;
     background: transparent;
-    padding: 28px 70px;
+    
     transition: all .50s ease;
 }
 .button{
@@ -272,6 +272,10 @@ h3{
 }
 
 /*login*/
+.form-container p{
+  color: #000000;
+  margin-top: 10px;
+}
 #show-login{
   transition: all .5s ease;
   padding: 10px 20px;
@@ -301,6 +305,7 @@ h3{
   cursor: pointer;
 }
 button {
+  margin-top: 25px;
 	border-radius: 20px;
 	border: 1px solid#0c7324;
 	background-color: #0c7324;
