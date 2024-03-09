@@ -47,7 +47,7 @@ header{
     align-items: center;
     justify-content: space-between;
     background: transparent;
-    
+    background: linear-gradient(to bottom ,rgb(0, 0, 0,1),rgb(31, 178, 73,0));
     transition: all .50s ease;
 }
 .button{

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Dashboard</title>
+</head>
+<body>
+    <h1>Restaurant Dashboard</h1>
+    <label for="donatedFood">Enter donated food amount (kgs): </label>
+    <input type="number" id="donatedFood" />
+    <button onclick="addDonatedFood()">Add Donated Food</button>
+
+    <script>
+        function addDonatedFood() {
+            // Get the donated food amount from the input field
+            const donatedFood = parseFloat(document.getElementById('donatedFood').value) || 0;
+
+            // Update the total food in local storage
+            const totalFood = (parseFloat(localStorage.getItem('totalFood')) || 0) + donatedFood;
+            localStorage.setItem('totalFood', totalFood);
+
+            // Clear the input field
+            document.getElementById('donatedFood').value = '';
+
+            // Trigger a storage event to update other open tabs/pages
+            window.dispatchEvent(new Event('storage'));
+        }
+    </script>
+</body>
+</html>
