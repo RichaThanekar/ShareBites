@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Profile</title>
-    <link rel="stylesheet" href="ngodash.css">
+    <link rel="stylesheet" href="restodash.css">
     <link rel="icon" type="image/x-icon" href="./images/logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script src="https://kit.fontawesome.com/dd3af09170.js" crossorigin="anonymous"></script>
@@ -21,7 +21,7 @@
        <div class="sidebar">
             <div class="logo-details">
               <div class="logo_name">
-                <a href="home.html"> <img src="./images/shelfshare.png" alt="logo"></a>
+                <a href="index.html"> <img src="./images/logo.png" alt="logo"></a>
               </div>
               <i class='bx bx-menu' id="btn"></i>
             </div>
@@ -42,28 +42,22 @@
                 </a>
                 <span class="tooltip">User</span>
               </li>
+              
+                
               <li>
                 <a onclick="showContent('section3')">
-                  <i class="fa-solid fa-bowl-food"></i>
-                  <span class="links_name">Donation Requests</span>
+                  <i class='bx bx-grid-alt'></i>
+                  <span class="links_name">Available Donation</span>
                 </a>
-                <span class="tooltip">Donation Requests</span>
+                <span class="tooltip">Available Donation</span>
               </li>
-              <li>
-                <a onclick="showContent('section4')">
-                  <i class="fa-solid fa-clock-rotate-left"></i>
-                  <span class="links_name">Previous Donations</span>
-                </a>
-                <span class="tooltip">Previous Donations</span>
-              </li>
-           
               
               <li class="profile">
                 <div class="profile-details">
-                  <img src="./images/user.png" alt="profileImg">
+                  <img src="./images/logo.png" alt="logo">
                   <div class="name_mail">
-                    <div class="name">AP Shah</div>
-                    <div class="mail">apshah@gmail.com</div>
+                    <div class="name">ShareBites</div>
+                    <div class="mail">Sharebites@gmail.com</div>
                   </div>
                 </div>
                 <i class='bx bx-log-out' id="log_out"></i>
@@ -71,85 +65,117 @@
             </ul>
           </div>
 
-          
-          <section  class="home-section" id="section1">
-            <div class="text">Dashboard</div>          
-              <div class="profile-container1">  
-                <div class="profile">
-                <img class="profile-image" src="./images/user.png" alt="Your Name"></div>
-                <div class="profile-description">
-                  <div class="profile-name">AP Shah</div>
-                      <h3>Book Category Preferences</h3>
-                      <p>Mystery, Science Fiction, Fantasy</p>
-                </div>
-                  <div class="cards">
-                    <div class="card">
-                      <h3>Books Rented</h3>
-                      <p>25</p>
-                  </div>
-                  <div class="card">
-                      <h3>Books Put on Rent</h3>
-                      <p>15</p>
-                  </div>
-                  <div class="card">
-                      <h3>Credits Earned</h3>
-                      <p>50</p>
-                  </div>
-                  </div>
+          <section class="home-section" id="section1">
+            <div class="text">DASHBOARD</div>  
+            <div class="profile-container1">
+                <!-- Display cards -->
+            <div class="cards">
+              <div class="card">
+                  <h3>Total Food Donated</h3>
+                  <p>25kg</p>
               </div>
-              
-              
-              </section>
-
-          <section  class="home-section" id="section2">
-            <div class="text">User</div>          
-              <div class="profile-container1">  
-                <div class="profile-description">
-                      <img class="profile-image" src="./images/user.png" alt="Your Name">
-                  <div class="profile-name">AP Shah</div>
-                      <p>Email: apshah@gmail.com</p>
-                      <p>Contact Number: +91 9874563210</p>
-                      <h3>Address</h3>
-                      <p> A.P. Shah Institute Of Technology<br>
-                          Survey No. 12, 13
-                          Opp. Hypercity Mall, Kasarvadavali,
-                          Ghodbunder Road, Thane West,
-                          Maharashtra 400615</p>
-                      <h3>Book Category Preferences</h3>
-                      <p>Mystery, Science Fiction, Fantasy</p>
-                  </div>
+              <div class="card">
+                  <h3>Available Donation</h3>
+                  <p>15kg</p>
               </div>
-              
-              </section>
+              <div class="card">
+                  <h3>Previous Donation</h3>
+                  <p>50kg</p>
+              </div>
+          </div>
+            </div>
+        </section>
 
-              
+        <section class="home-section" id="section2">
+          <div class="text">User</div>          
+          <div class="profile-container1" style="text-align: center;">  
+              <div class="profile-description">
+                  <img class="profile-image" src="./images/user.png" alt="Your Name">
+                  <div class="profile-name">AP Shah</div>
+                  
+                  <p>Email: apshah@gmail.com<br>Contact Number: +91 9874563210</p>
+                  <h3>Address</h3>
+                  <p>A.P. Shah Institute Of Technology<br>
+                  Survey No. 12, 13<br>
+                  Opp. Hypercity Mall, Kasarvadavali,<br>
+                  Ghodbunder Road, Thane West,<br>
+                  Maharashtra 400615</p>
+                  <h3>Types of food available</h3>
+                  <p>Veg, Non-Veg, Jain Food</p>
+              </div> 
+          </div>
+      </section>
+      
+
+             
+            
+      <link rel="stylesheet" href="styles.css">
                   <section  class="home-section" id="section3">
-                    <div class="text"></div>  
+                    <div class="text">Available Donations</div>  
                     <div class="profile-container1">
-                      Donation Requests Section
-                    </div>
-                    
-                  </section>
+                      <h2>Available Donations</h2>
+                    <table id="transactionTable">
+                        <thead>
+                            <tr>
+                                <th>Food Type</th>
+                                <th>Quantity (kgs)</th>
+                                <th>Phone Number</th>
+                                <th>Pick-up Time</th>
+                                <th>Location</th>
+                                <th>Message</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Transaction items will be displayed here dynamically -->
+                        </tbody>
+                    </table>
+                    <div id="totalDonated" class="total-donated"></div>
+                    <canvas id="chart" width="400" height="400"></canvas>
+                </div>
+                <script src="script1.js"></script>
+                <script>
+                  function addToInventory() {
+                      // Get the input values
+                      const foodType = document.getElementById('foodType').value;
+                      const quantity = document.getElementById('quantity').value;
+                      const phoneNumber = document.getElementById('phoneNumber').value;
+                      const pickUpTime = document.getElementById('pickUpTime').value;
+                      const location = document.getElementById('location').value;
+                      const message = document.getElementById('message').value;
+          
+                      // Append a new row to the table with the input values in the available donations section
+                      const table = document.getElementById('transactionTable').getElementsByTagName('tbody')[0];
+                      const newRow = table.insertRow();
+                      const cell1 = newRow.insertCell(0);
+                      const cell2 = newRow.insertCell(1);
+                      const cell3 = newRow.insertCell(2);
+                      const cell4 = newRow.insertCell(3);
+                      const cell5 = newRow.insertCell(4);
+                      const cell6 = newRow.insertCell(5);
+                      cell1.innerHTML = foodType;
+                      cell2.innerHTML = quantity;
+                      cell3.innerHTML = phoneNumber;
+                      cell4.innerHTML = pickUpTime;
+                      cell5.innerHTML = location;
+                      cell6.innerHTML = message;
+          
+                      // Clear the input fields
+                      document.getElementById('foodType').value = '';
+                      document.getElementById('quantity').value = '';
+                      document.getElementById('phoneNumber').value = '';
+                      document.getElementById('pickUpTime').value = '';
+                      document.getElementById('location').value = '';
+                      document.getElementById('message').value = '';
+          
+                      // Trigger a storage event to update other open tabs/pages
+                      window.dispatchEvent(new Event('storage'));
+                  }
+              </script>
               
-                  <section  class="home-section" id="section4">
-                    <div class="text"></div>  
-                    <div class="profile-container1">
-                        Previous Donations section
                     </div>
                   </section>
 
-                  <section  class="home-section" id="section5">
-                    <div class="text">Community Announcementsgfffffff</div>  
-                    <div class="profile-container1">
-                      fghj
-                    </div>
-                  </section>
-
-                  <section  class="home-section" id="section6">
-                    <div class="text">Dashboggfard</div>  
-                    
-                  </section>
-                 
+                  
    <script>
         let sidebar = document.querySelector(".sidebar");
         let closeBtn = document.querySelector("#btn");
@@ -196,6 +222,7 @@
 });
 
    </script>
+ 
    
    <script>
     window.addEventListener('load', function () {
