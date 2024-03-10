@@ -21,7 +21,7 @@
        <div class="sidebar">
             <div class="logo-details">
               <div class="logo_name">
-                <a href="home.html"> <img src="./images/shelfshare.png" alt="logo"></a>
+                <a href="index.html"> <img src="./images/logo.png" alt="logo"></a>
               </div>
               <i class='bx bx-menu' id="btn"></i>
             </div>
@@ -56,14 +56,21 @@
                 </a>
                 <span class="tooltip">My Donations</span>
               </li>
-           
+                
+              <li>
+                <a onclick="showContent('section5')">
+                  <i class='bx bx-grid-alt'></i>
+                  <span class="links_name">Pending Donation</span>
+                </a>
+                <span class="tooltip">Pending Donation</span>
+              </li>
               
               <li class="profile">
                 <div class="profile-details">
-                  <img src="./images/user.png" alt="profileImg">
+                  <img src="./images/logo.png" alt="logo">
                   <div class="name_mail">
-                    <div class="name">AP Shah</div>
-                    <div class="mail">apshah@gmail.com</div>
+                    <div class="name">ShareBites</div>
+                    <div class="mail">Sharebites@gmail.com</div>
                   </div>
                 </div>
                 <i class='bx bx-log-out' id="log_out"></i>
@@ -71,85 +78,143 @@
             </ul>
           </div>
 
-          
-          <section  class="home-section" id="section1">
-            <div class="text">Dashboard</div>          
-              <div class="profile-container1">  
-                <div class="profile">
-                <img class="profile-image" src="./images/user.png" alt="Your Name"></div>
-                <div class="profile-description">
-                  <div class="profile-name">AP Shah</div>
-                      <h3>Book Category Preferences</h3>
-                      <p>Mystery, Science Fiction, Fantasy</p>
-                </div>
-                  <div class="cards">
-                    <div class="card">
-                      <h3>Books Rented</h3>
-                      <p>25</p>
-                  </div>
-                  <div class="card">
-                      <h3>Books Put on Rent</h3>
-                      <p>15</p>
-                  </div>
-                  <div class="card">
-                      <h3>Credits Earned</h3>
-                      <p>50</p>
-                  </div>
-                  </div>
+          <section class="home-section" id="section1">
+            <div class="text">DASHBOARD</div>  
+            <div class="profile-container1">
+                <!-- Display cards -->
+            <div class="cards">
+              <div class="card">
+                  <h3>Total Food Donated</h3>
+                  <p>25kg</p>
               </div>
-              
-              
-              </section>
-
-          <section  class="home-section" id="section2">
-            <div class="text">User</div>          
-              <div class="profile-container1">  
-                <div class="profile-description">
-                      <img class="profile-image" src="./images/user.png" alt="Your Name">
-                  <div class="profile-name">AP Shah</div>
-                      <p>Email: apshah@gmail.com</p>
-                      <p>Contact Number: +91 9874563210</p>
-                      <h3>Address</h3>
-                      <p> A.P. Shah Institute Of Technology<br>
-                          Survey No. 12, 13
-                          Opp. Hypercity Mall, Kasarvadavali,
-                          Ghodbunder Road, Thane West,
-                          Maharashtra 400615</p>
-                      <h3>Book Category Preferences</h3>
-                      <p>Mystery, Science Fiction, Fantasy</p>
-                  </div>
+              <div class="card">
+                  <h3>Pending Donation</h3>
+                  <p>15kg</p>
               </div>
-              
-              </section>
+              <div class="card">
+                  <h3>Previous Donation</h3>
+                  <p>50kg</p>
+              </div>
+          </div>
+            </div>
+        </section>
 
-              
-                  <section  class="home-section" id="section3">
-                    <div class="text"></div>  
-                    <div class="profile-container1">
-                      Donation Requests Section
+        <section class="home-section" id="section2">
+          <div class="text">User</div>          
+          <div class="profile-container1" style="text-align: center;">  
+              <div class="profile-description">
+                  <img class="profile-image" src="./images/user.png" alt="Your Name">
+                  <div class="profile-name">AP Shah</div>
+                  
+                  <p>Email: apshah@gmail.com<br>Contact Number: +91 9874563210</p>
+                  <h3>Address</h3>
+                  <p>A.P. Shah Institute Of Technology<br>
+                  Survey No. 12, 13<br>
+                  Opp. Hypercity Mall, Kasarvadavali,<br>
+                  Ghodbunder Road, Thane West,<br>
+                  Maharashtra 400615</p>
+                  <h3>Types of food available</h3>
+                  <p>Veg, Non-Veg, Jain Food</p>
+              </div> 
+          </div>
+      </section>
+      
+
+              <link rel="stylesheet" href="styles.css">
+              <section class="home-section" id="section3">
+                <div class="container" id="container">
+                    <h1>DONATE</h1>
+                    <div class="form-container">
+                        <label for="foodType">Food Type:</label>
+                        <input type="text" id="foodType">
+                        <label for="quantity">Quantity:</label>
+                        <input type="number" id="quantity">
+                        <label for="phoneNumber">Phone Number:</label>
+                        <input type="text" id="phoneNumber">
+                        <label for="pickUpTime">Pick-up Time:</label>
+                        <input type="time" id="pickUpTime" class="timer">
+                        <label for="location">Pick-up Location:</label>
+                        <input type="text" id="location">
+                        <label for="message">Want to write any message?</label>
+                        <input type="text" id="message" placeholder="Write your message here...">
                     </div>
-                    
-                  </section>
-              
+                    <div class="button-container">
+                        <button onclick="addToInventory()">Add to Inventory</button>
+                    </div>
+                </div>
+            </section>
                   <section  class="home-section" id="section4">
                     <div class="text"></div>  
                     <div class="profile-container1">
-                        Previous Donations section
+                        <h3>Previous Donations section</h3>
                     </div>
                   </section>
 
                   <section  class="home-section" id="section5">
-                    <div class="text">Community Announcementsgfffffff</div>  
+                    <div class="text">Pending Donations</div>  
                     <div class="profile-container1">
-                      fghj
+                      <h2>Pending Donations</h2>
+                    <table id="transactionTable">
+                        <thead>
+                            <tr>
+                                <th>Food Type</th>
+                                <th>Quantity (kgs)</th>
+                                <th>Phone Number</th>
+                                <th>Pick-up Time</th>
+                                <th>Location</th>
+                                <th>Message</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Transaction items will be displayed here dynamically -->
+                        </tbody>
+                    </table>
+                    <div id="totalDonated" class="total-donated"></div>
+                    <canvas id="chart" width="400" height="400"></canvas>
+                </div>
+                <script src="script1.js"></script>
+                <script>
+                  function addToInventory() {
+                      // Get the input values
+                      const foodType = document.getElementById('foodType').value;
+                      const quantity = document.getElementById('quantity').value;
+                      const phoneNumber = document.getElementById('phoneNumber').value;
+                      const pickUpTime = document.getElementById('pickUpTime').value;
+                      const location = document.getElementById('location').value;
+                      const message = document.getElementById('message').value;
+          
+                      // Append a new row to the table with the input values
+                      const table = document.getElementById('transactionTable').getElementsByTagName('tbody')[0];
+                      const newRow = table.insertRow();
+                      const cell1 = newRow.insertCell(0);
+                      const cell2 = newRow.insertCell(1);
+                      const cell3 = newRow.insertCell(2);
+                      const cell4 = newRow.insertCell(3);
+                      const cell5 = newRow.insertCell(4);
+                      const cell6 = newRow.insertCell(5);
+                      cell1.innerHTML = foodType;
+                      cell2.innerHTML = quantity;
+                      cell3.innerHTML = phoneNumber;
+                      cell4.innerHTML = pickUpTime;
+                      cell5.innerHTML = location;
+                      cell6.innerHTML = message;
+          
+                      // Clear the input fields
+                      document.getElementById('foodType').value = '';
+                      document.getElementById('quantity').value = '';
+                      document.getElementById('phoneNumber').value = '';
+                      document.getElementById('pickUpTime').value = '';
+                      document.getElementById('location').value = '';
+                      document.getElementById('message').value = '';
+          
+                      // Trigger a storage event to update other open tabs/pages
+                      window.dispatchEvent(new Event('storage'));
+                  }
+              </script>
                     </div>
                   </section>
 
-                  <section  class="home-section" id="section6">
-                    <div class="text">Dashboggfard</div>  
-                    
-                  </section>
-                 
+                  
    <script>
         let sidebar = document.querySelector(".sidebar");
         let closeBtn = document.querySelector("#btn");
@@ -196,6 +261,7 @@
 });
 
    </script>
+ 
    
    <script>
     window.addEventListener('load', function () {
