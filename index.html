@@ -212,5 +212,34 @@
 
   </footer>
 </body>
-<script src="script.js"></script>
+<style>.d{
+    position: relative;
+    transform: translateY(50px);
+    opacity: 0;
+    transition:all 2s ease ;
+  }
+  .d.active{
+    transform: translateY(0px);
+    opacity: 1;
+  }</style>
+<script src="script.js">
+window.addEventListener('scroll', reveal);
+    function reveal(){
+        var reveals = document.querySelectorAll('.d');
+        for(var i = 0;i<reveals,length;i++){
+            var windowheight = window.innerHeight;
+            var revealtop = reveals[i].getBoundingClientRect().top;
+            var revealpoint = 50;
+
+            if(revealtop < windowheight - revealpoint){
+                reveals[i].classList.add('active');
+            }
+            else{
+                reveals[i].classList.remove('active');
+            }
+        }
+    }
+
+
+</script>
 </html>
