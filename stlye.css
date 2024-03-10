@@ -5,6 +5,7 @@
 }
 body{
   overflow-x: hidden;
+  background-color: #f9f9f9
 }
 header{
     width: 100vw;
@@ -181,8 +182,8 @@ h3{
 .card{ 
   flex: 1;
   background: #DAE2F8;  
-  background: -webkit-linear-gradient(to right, #D6A4A4, #DAE2F8);
-  background: linear-gradient(to right, #0d5e1d, #DAE2F8); 
+  background: -webkit-linear-gradient(to right, #6bf05d, #1d5c1d);
+  background: linear-gradient(to right, #9ccaa4, #56d45a); 
   border-radius: 15px;
   margin: 10px;
   padding: 15px;
@@ -215,13 +216,25 @@ h3{
 
 
  /*impact*/
- .impact h1{
+ .impact h1,h3{
   margin-top: 20px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   align-content: center;
+ }
+ .impact p{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  padding: 10px 50px 0 50px;
+  font-size: 18px;
+  color: rgb(33, 33, 33);
+
+ 
  }
  .impact .line1{
   width: 300px;
@@ -230,8 +243,15 @@ h3{
   margin: 10px auto;
   border-radius: 5px;  
 }
-
-
+.people{
+  padding-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+.people img{
+  height: 400px;
+  width: 500px;
+}
 
 
 /*vision-mission*/
