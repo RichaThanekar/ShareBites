@@ -8,8 +8,6 @@ header{
     width: 100vw;
     height: 100vh;
     background: linear-gradient(rgba(8, 58, 26, 0.75), rgba(0, 0, 0, 0.5)), url(images/bg.jpg);
-
-    
     background-size: cover; 
     background-position: center;
     display: flex;
@@ -222,22 +220,22 @@ h3{
     padding: 30px;
   }
   .icon {
-    margin-right: 30px; /* Add margin between icon and text */
+    margin-right: 30px; 
 }
   .vm1,
   .vm2 {
     display: flex;
     align-items: center;
-    flex: 1; /* Equal flex for both vm1 and vm2 */
+    flex: 1; 
   }
   
   .vm1 {
-    padding-right: 15px; /* Adjusted padding */
+    padding-right: 15px; 
   }
   
   .vm2 {
-    padding-left: 15px; /* Adjusted padding */
-    margin-left: 15px; /* Added margin to balance space */
+    padding-left: 15px;
+    margin-left: 15px;
   }
   
   .text-container {
@@ -276,7 +274,7 @@ h3{
   color: #000000;
   margin-top: 10px;
 }
-#show-login{
+#show-login {
   transition: all .5s ease;
   padding: 10px 20px;
   font-size: 15px;
@@ -288,6 +286,21 @@ h3{
   border-radius: 5px;
 }
 #show-login:hover{
+  color: #05161a;
+  background-color: #0c7324;
+}
+#show-login2{
+  transition: all .5s ease;
+  padding: 10px 20px;
+  font-size: 15px;
+  font-weight:600 ;
+  color: #222;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+#show-login2:hover{
   color: #05161a;
   background-color: #0c7324;
 }
@@ -481,24 +494,17 @@ input {
 	transform: translateX(20%);
 }
 
-.social-container {
-	margin: 20px 0;
-}
-
-.social-container a {
-	border: 1px solid #DDDDDD;
-	border-radius: 50%;
-	display: inline-flex;
-	justify-content: center;
-	align-items: center;
-	margin: 0 5px;
-	height: 40px;
-	width: 40px;
-}
-.popup {
+.login_container{
+  background-color: #fff;
+	border-radius: 10px;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+			0 10px 10px rgba(0,0,0,0.22);
+      overflow: hidden;
+	position: relative;
+	width:370px ;
+	height: 300px;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
   position: fixed;
-  max-width: 320px;
-  width: 100%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1.2);
@@ -508,17 +514,15 @@ input {
   border: 1px solid black;
   border-radius: 4px;
   box-shadow: rgba(7, 7, 7, 0.1);
-  opacity: 0;
-  pointer-events: none;
-  transition: all 0.4s ease-out;
-}
-.popup.active {
   opacity: 1;
-  pointer-events: auto;
-  transform: translate(-50%, -50%) scale(1);
-  background: linear-gradient(rgba(0,0,0,0.75));
 }
-
+.login_container p{
+  margin-bottom: 100px;
+}
+.login_container h1{
+  color: #000000;
+  margin-top: 100px;
+}
 /*footer*/
 .footer-distributed {
   background: linear-gradient(rgba(8, 58, 26, 0.95), rgba(0, 0, 0, 0.75)), url(https://www.nohungrychild.in/images/Hungry_child.jpg);
