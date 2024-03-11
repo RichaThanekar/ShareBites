@@ -121,27 +121,196 @@
           </div>
           </div>
             </div>
+            <div class="profile-details">
+              <h2>Profile Details</h2>
+              <div class="profile-info">
+                  <p><strong>Name:</strong> <span id="profile-name">AP Shah</span></p>
+                  <p><strong>Email:</strong> <span id="profile-email">apshah@gmail.com</span></p>
+                  <p><strong>Contact Number:</strong> <span id="profile-phone">+91 9874563210</span></p>
+                  <p><strong>Address:</strong> <span id="profile-address">A.P. Shah Institute Of Technology, Survey No. 12, 13, Opp. Hypercity Mall, Kasarvadavali, Ghodbunder Road, Thane West, Maharashtra 400615</span></p>
+                  <p><strong>Types of Food Available:</strong> <span id="profile-food-types">Veg, Non-Veg, Jain Food</span></p>
+              </div>
+          </div>
         </section>
 
         <section class="home-section" id="section2">
           <div class="text">Profile</div>          
           <div class="profile-container1" style="text-align: center;">  
               <div class="profile-description">
-        
-                  <div class="profile-name">AP Shah</div>
-                  
-                  <p>Email: apshah@gmail.com<br>Contact Number: +91 9874563210</p>
+                  <div class="profile-name" contenteditable="true">AP Shah</div>
+                  <p class="profile-info">Email: <span id="email" contenteditable="true">apshah@gmail.com</span><br>Contact Number: <span id="phoneNumber" contenteditable="true">+91 9874563210</span></p>
                   <h3>Address</h3>
-                  <p>A.P. Shah Institute Of Technology<br>
+                  <p id="address" contenteditable="true">A.P. Shah Institute Of Technology<br>
                   Survey No. 12, 13<br>
                   Opp. Hypercity Mall, Kasarvadavali,<br>
                   Ghodbunder Road, Thane West,<br>
                   Maharashtra 400615</p>
                   <h3>Types of food available</h3>
-                  <p>Veg, Non-Veg, Jain Food</p>
+                  <p id="foodTypes" contenteditable="true">Veg, Non-Veg, Jain Food</p>
+                  <button onclick="saveChanges()">Save</button>
               </div> 
           </div>
       </section>
+      
+      <style>
+          body {
+              font-family: 'Roboto', sans-serif;
+              background-color: #f9f9f9;
+          }
+      
+          .profile-container1 {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 100%;
+          }
+      
+          .profile-description {
+              max-width: 500px;
+              margin: 0 auto;
+              padding: 30px;
+              border-radius: 10px;
+              background: linear-gradient(to bottom right, #ffffff, #f0f0f0);
+              box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          }
+      
+          .profile-name {
+              font-size: 32px;
+              font-weight: bold;
+              margin-bottom: 20px;
+              color: #333;
+              text-transform: uppercase;
+              letter-spacing: 2px;
+          }
+      
+          .profile-info {
+              margin-bottom: 30px;
+              color: #555;
+          }
+      
+          .profile-info span {
+              color: #007bff;
+              font-weight: bold;
+          }
+      
+          .profile-description h3 {
+              font-size: 24px;
+              margin-bottom: 15px;
+              color: #333;
+              border-bottom: 2px solid #007bff;
+              padding-bottom: 10px;
+          }
+      
+          .profile-description p {
+              margin-bottom: 25px;
+              line-height: 1.6;
+              color: #666;
+          }
+      
+          button {
+              padding: 12px 24px;
+              font-size: 16px;
+              background-color: #007bff;
+              color: #fff;
+              border: none;
+              border-radius: 5px;
+              cursor: pointer;
+              transition: background-color 0.3s ease;
+          }
+      
+          button:hover {
+              background-color: #0056b3;
+          }
+
+       
+            /* Common Styles */
+            body {
+                font-family: 'Roboto', sans-serif;
+                background-color: #f9f9f9;
+                margin: 0;
+                padding: 0;
+            }
+            
+            .home-section {
+                padding: 20px;
+                margin-bottom: 20px;
+                background-color: #fff;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                border-radius: 10px;
+            }
+            
+            .text {
+                font-size: 24px;
+                font-weight: bold;
+                margin-bottom: 20px;
+            }
+        
+            /* Profile Details */
+            .profile-details {
+                margin-top: 20px;
+                padding: 20px;
+                background-color: #f0f0f0;
+                border-radius: 10px;
+            }
+            
+            .profile-details h2 {
+                font-size: 24px;
+                margin-bottom: 20px;
+                color: #333;
+            }
+        
+            .profile-info {
+                font-size: 16px;
+                color: #666;
+            }
+        
+            .profile-info p {
+                margin-bottom: 10px;
+            }
+        
+            .profile-info strong {
+                color: #333;
+            }
+        </style>
+        
+
+
+
+  
+      
+      
+      
+      
+      <script>
+          function saveChanges() {
+              const name = document.querySelector('.profile-name').textContent;
+              const email = document.querySelector('#email').textContent;
+              const phoneNumber = document.querySelector('#phoneNumber').textContent;
+              const address = document.querySelector('#address').textContent;
+              const foodTypes = document.querySelector('#foodTypes').textContent;
+      
+              // Perform actions to save changes, e.g., send data to a server
+      
+              // Optionally, update the profile display
+              document.querySelector('.profile-name').textContent = name;
+              document.querySelector('#email').textContent = email;
+              document.querySelector('#phoneNumber').textContent = phoneNumber;
+              document.querySelector('#address').textContent = address;
+              document.querySelector('#foodTypes').textContent = foodTypes;
+
+               // Update dashboard with profile information
+               document.getElementById('profile-name').textContent = name;
+               document.getElementById('profile-email').textContent = email;
+               document.getElementById('profile-phone').textContent = phoneNumber;
+               document.getElementById('profile-address').textContent = address;
+               document.getElementById('profile-food-types').textContent = foodTypes;
+       
+      
+              // Notify user that changes are saved
+              alert('Changes saved successfully!');
+          }
+      </script>
+      
       
 
               <link rel="stylesheet" href="styles.css">
