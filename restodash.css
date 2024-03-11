@@ -563,14 +563,8 @@ body {
 }
 .profile-container1 {
   justify-content: right;
-  max-width:  1200px;;
-  max-height: 1200px;
-  margin: 0 auto;
-  padding: 30px;
-  background-color: rgba(255, 255, 255, 0.75);
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   text-align: center;
+  
 }
 
 .profile-image {
@@ -596,50 +590,70 @@ body {
   margin-top: 20px;
 }
 
-.cards {
-  justify-content: center;
-  display: flex;
-  align-items: center;
-  padding: 40px 0;
-  color: black;
-  font-family:'Play', sans-serif;
-}
 .card {
-  flex: 1;
-  background: #DAE2F8;  
-  background: -webkit-linear-gradient(to right, #D6A4A4, #DAE2F8);
-  background: linear-gradient(to right, #D6A4A4, #DAE2F8); 
-  border-radius: 15px;
-  margin: 10px;
-  padding: 15px;
+  --bg: #f7f7f8;
+  --hover-bg: #0a7b2a78;
+  --hover-text: #144622;
+  max-width: 23ch;
   text-align: center;
-  max-width: 100%;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease;
-  flex: 0 0 auto;
+  background: var(--bg);
+  padding: 1.5em;
+  padding-block: 1.8em;
   border-radius: 5px;
-  overflow: hidden;
   position: relative;
-  cursor: pointer;
+  overflow: hidden;
+  transition: .3s cubic-bezier(.6,.4,0,1), transform .15s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em; /* Adjust the gap value to reduce space between cards */
+  margin: 5px; /* Adjust the margin value to reduce space between cards */
 }
 
-.card h3 {
-  text-align: center;
-  font-size: 1.2rem;
-  margin-bottom: 10px;
+.card__body {
+  color: #464853;
+  line-height: 1.5em;
+  font-size: 1em;
 }
 
-.card p {
-  text-align: center;
-  font-size: 1rem;
+.card > :not(span) {
+  transition: .3s cubic-bezier(.6,.4,0,1);
 }
 
-/* Hover effect (optional) */
+.card > strong {
+  display: block;
+  font-size: 1.4rem;
+  letter-spacing: -.035em;
+}
+
+.card .title {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--hover-text);
+  border-radius: 5px;
+  font-weight: bold;
+  top: 100%;
+  transition: all .3s cubic-bezier(.6,.4,0,1);
+}
+
+.card:hover .title {
+  top: 0;
+  font-size: 1.2em;
+}
+
 .card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  background: var(--hover-bg);
 }
 
+.card:hover>div,.card:hover>strong {
+  opacity: 0;
+}
  
 .countdown {
   font-size: 60px;
