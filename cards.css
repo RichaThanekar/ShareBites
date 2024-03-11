@@ -54,5 +54,12 @@
   }
 .profile-container1 {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-evenly;}
+  .flip-card {
+    margin: 20px; /* Adjust the margin as needed */
+    width: 190px;
+    height: 254px;
+    perspective: 1000px;
+    font-family: sans-serif;
 }
+
