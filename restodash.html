@@ -169,8 +169,7 @@
                         <input class="input" type="text" id="foodType">
                         <label for="quantity">Quantity:</label>
                         <input  class="input" type="number" id="quantity">
-                        <label for="phoneNumber">Phone Number:</label>
-                        <input  class="input" type="text" id="phoneNumber">
+                       
                         <label for="pickUpTime">Pick-up Time:</label>
                         <input  class="input" type="time" id="pickUpTime" class="timer">
                         <label for="location">Pick-up Location:</label>
@@ -199,7 +198,7 @@
                             <tr>
                                 <th>Food Type</th>
                                 <th>Quantity (kgs)</th>
-                                <th>Phone Number</th>
+                                
                                 <th>Pick-up Time</th>
                                 <th>Location</th>
                                 <th>Message</th>
@@ -218,7 +217,7 @@
                       // Get the input values
                       const foodType = document.getElementById('foodType').value;
                       const quantity = document.getElementById('quantity').value;
-                      const phoneNumber = document.getElementById('phoneNumber').value;
+                      
                       const pickUpTime = document.getElementById('pickUpTime').value;
                       const location = document.getElementById('location').value;
                       const message = document.getElementById('message').value;
@@ -231,18 +230,18 @@
                       const cell3 = newRow.insertCell(2);
                       const cell4 = newRow.insertCell(3);
                       const cell5 = newRow.insertCell(4);
-                      const cell6 = newRow.insertCell(5);
+                     
                       cell1.innerHTML = foodType;
                       cell2.innerHTML = quantity;
-                      cell3.innerHTML = phoneNumber;
-                      cell4.innerHTML = pickUpTime;
-                      cell5.innerHTML = location;
-                      cell6.innerHTML = message;
+                     
+                      cell3.innerHTML = pickUpTime;
+                      cell4.innerHTML = location;
+                      cell5.innerHTML = message;
           
                       // Clear the input fields
                       document.getElementById('foodType').value = '';
                       document.getElementById('quantity').value = '';
-                      document.getElementById('phoneNumber').value = '';
+                      
                       document.getElementById('pickUpTime').value = '';
                       document.getElementById('location').value = '';
                       document.getElementById('message').value = '';
