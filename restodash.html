@@ -38,9 +38,9 @@
               <li>
                 <a onclick="showContent('section2')">
                   <i class='bx bx-user'></i>
-                  <span class="links_name">User</span>
+                  <span class="links_name">Profile</span>
                 </a>
-                <span class="tooltip">User</span>
+                <span class="tooltip">Profile</span>
               </li>
               <li>
                 <a onclick="showContent('section3')">
@@ -124,10 +124,10 @@
         </section>
 
         <section class="home-section" id="section2">
-          <div class="text">User</div>          
+          <div class="text">Profile</div>          
           <div class="profile-container1" style="text-align: center;">  
               <div class="profile-description">
-                  <img class="profile-image" src="./images/user.png" alt="Your Name">
+        
                   <div class="profile-name">AP Shah</div>
                   
                   <p>Email: apshah@gmail.com<br>Contact Number: +91 9874563210</p>
@@ -146,24 +146,24 @@
 
               <link rel="stylesheet" href="styles.css">
               <section class="home-section" id="section3">
+                <div class="text">DONATE FOOD</div>  
                 <div class="container" id="container">
-                    <h1>DONATE</h1>
                     <div class="form-container">
                         <label for="foodType">Food Type:</label>
-                        <input type="text" id="foodType">
+                        <input class="input" type="text" id="foodType">
                         <label for="quantity">Quantity:</label>
-                        <input type="number" id="quantity">
+                        <input  class="input" type="number" id="quantity">
                         <label for="phoneNumber">Phone Number:</label>
-                        <input type="text" id="phoneNumber">
+                        <input  class="input" type="text" id="phoneNumber">
                         <label for="pickUpTime">Pick-up Time:</label>
-                        <input type="time" id="pickUpTime" class="timer">
+                        <input  class="input" type="time" id="pickUpTime" class="timer">
                         <label for="location">Pick-up Location:</label>
-                        <input type="text" id="location">
+                        <input  class="input" type="text" id="location">
                         <label for="message">Want to write any message?</label>
-                        <input type="text" id="message" placeholder="Write your message here...">
+                        <input  class="input" type="text" id="message" placeholder="Write your message here...">
                     </div>
                     <div class="button-container">
-                        <button onclick="addToInventory()">Add to Inventory</button>
+                        <button onclick="addToInventory()">Add Donation</button>
                     </div>
                 </div>
             </section>
@@ -177,7 +177,7 @@
                   <section  class="home-section" id="section5">
                     <div class="text">Pending Donations</div>  
                     <div class="profile-container1">
-                      <h2>Pending Donations</h2>
+                      
                     <table id="transactionTable">
                         <thead>
                             <tr>
