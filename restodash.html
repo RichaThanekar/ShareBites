@@ -65,26 +65,13 @@
                 <span class="tooltip">Pending Donation</span>
               </li>
               
-              <li class="profile">
-                <div class="profile-details">
-                  <img src="./images/logo.png" alt="logo">
-                  <div class="name_mail">
-                    <div class="name">ShareBites</div>
-                    <div class="mail">Sharebites@gmail.com</div>
-                  </div>
-                </div>
-                <i class='bx bx-log-out' id="log_out"></i>
-              </li>
+              
             </ul>
           </div>
 
           <section class="home-section" id="section1">
             <div class="text">DASHBOARD</div>  
-            <div class="profile-container1">
-
-            </div>
-            
-            
+ 
             <div class="profile-details">
               <h2>Profile Details</h2>
               <div class="profile-info">
@@ -119,21 +106,25 @@
 
         <section class="home-section" id="section2">
           <div class="text">Profile</div>          
-          <div class="profile-container1" style="text-align: center;">  
+          <div class="profile-container2" style="text-align: center;">  
               <div class="profile-description">
-                  <div class="profile-name" contenteditable="true">AP Shah</div>
-                  <p class="profile-info">Email: <span id="email" contenteditable="true">apshah@gmail.com</span><br>Contact Number: <span id="phoneNumber" contenteditable="true">+91 9874563210</span></p>
-                  <h3>Address</h3>
-                  <p id="address" contenteditable="true">A.P. Shah Institute Of Technology<br>
-                  Survey No. 12, 13<br>
-                  Opp. Hypercity Mall, Kasarvadavali,<br>
-                  Ghodbunder Road, Thane West,<br>
-                  Maharashtra 400615</p>
-                  <h3>Types of food available</h3>
+                  
+                  Name:<div class="profile-name" contenteditable="true" id="name">AP Shah</div>
+                  
+                  Email:<p class="profile-info"><span id="email" contenteditable="true">apshah@gmail.com</span></p>
+                  
+                  Contact Number:<p class="profile-info"><span id="phoneNumber" contenteditable="true">+91 9874563210</span></p>
+                  
+                  Address: <p id="address" contenteditable="true"></p>
+                  
+                  Types of food available:
                   <p id="foodTypes" contenteditable="true">Veg, Non-Veg, Jain Food</p>
+                  
                   <button onclick="saveChanges()">Save</button>
               </div> 
           </div>
+      </section>
+      
       </section>
     
       
