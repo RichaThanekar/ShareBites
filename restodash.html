@@ -21,7 +21,7 @@
        <div class="sidebar">
             <div class="logo-details">
               <div class="logo_name">
-                <a href="index.html"> <img src="./images/logo.png" alt="logo"></a>
+                <a href="index.html"> <img src="./images/logo.png" alt="logo" ></a>
               </div>
               <i class='bx bx-menu' id="btn"></i>
             </div>
@@ -135,17 +135,14 @@
               const phoneNumber = document.querySelector('#phoneNumber').textContent;
               const address = document.querySelector('#address').textContent;
               const foodTypes = document.querySelector('#foodTypes').textContent;
-      
-              // Perform actions to save changes, e.g., send data to a server
-      
-              // Optionally, update the profile display
+
               document.querySelector('.profile-name').textContent = name;
               document.querySelector('#email').textContent = email;
               document.querySelector('#phoneNumber').textContent = phoneNumber;
               document.querySelector('#address').textContent = address;
               document.querySelector('#foodTypes').textContent = foodTypes;
 
-               // Update dashboard with profile information
+
                document.getElementById('profile-name').textContent = name;
                document.getElementById('profile-email').textContent = email;
                document.getElementById('profile-phone').textContent = phoneNumber;
@@ -153,7 +150,7 @@
                document.getElementById('profile-food-types').textContent = foodTypes;
        
       
-              // Notify user that changes are saved
+
               alert('Changes saved successfully!');
           }
       </script>
@@ -183,9 +180,9 @@
                 </div>
             </section>
                   <section  class="home-section" id="section4">
-                    <div class="text"></div>  
+                    <div class="text">Previous Donations section</div>  
                     <div class="profile-container1">
-                        <h3>Previous Donations section</h3>
+                        
                     </div>
                   </section>
                  
@@ -205,7 +202,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <!-- Transaction items will be displayed here dynamically -->
+                          
                         </tbody>
                     </table>
                     <div id="totalDonated" class="total-donated"></div>
@@ -214,15 +211,14 @@
                 <script src="script1.js"></script>
                 <script>
                   function addToInventory() {
-                      // Get the input values
+   
                       const foodType = document.getElementById('foodType').value;
                       const quantity = document.getElementById('quantity').value;
                       
                       const pickUpTime = document.getElementById('pickUpTime').value;
                       const location = document.getElementById('location').value;
                       const message = document.getElementById('message').value;
-          
-                      // Append a new row to the table with the input values
+
                       const table = document.getElementById('transactionTable').getElementsByTagName('tbody')[0];
                       const newRow = table.insertRow();
                       const cell1 = newRow.insertCell(0);
@@ -246,7 +242,7 @@
                       document.getElementById('location').value = '';
                       document.getElementById('message').value = '';
           
-                      // Trigger a storage event to update other open tabs/pages
+              
                       window.dispatchEvent(new Event('storage'));
                   }
               </script>
@@ -278,11 +274,11 @@
         function showContent(id) {
             const sections = document.querySelectorAll('.home-section');
             sections.forEach(section => {
-                section.style.display = 'none'; // Hide all sections
+                section.style.display = 'none'; 
             });
 
             const content = document.getElementById(id);
-            content.style.display = 'block'; // Show the selected section
+            content.style.display = 'block'; 
         }
    </script>
 

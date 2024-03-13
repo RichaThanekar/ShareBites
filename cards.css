@@ -57,7 +57,7 @@
     justify-content: space-evenly;
   }
   .flip-card {
-    margin: 20px; /* Adjust the margin as needed */
+    margin: 20px; 
     width: 190px;
     height: 254px;
     perspective: 1000px;

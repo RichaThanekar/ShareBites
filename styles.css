@@ -15,31 +15,31 @@
   }
   
   .timer {
-    background-color: #f0f0f0; /* Light color for time input field */
+    background-color: #f0f0f0; 
     border: none;
     border-radius: 5px;
     padding: 8px;
     font-size: 14px;
-    margin-bottom: 10px; /* Added space between time input and button */
+    margin-bottom: 10px; 
   }
   
   .button-container {
-    text-align: center; /* Center align the button */
+    text-align: center; 
   }
   
   .button-container button {
-    background-color: #114e13; /* Green background color */
-    color: white; /* White text color */
-    padding: 12px 20px; /* Padding around text */
-    border: none; /* Remove border */
-    border-radius: 35px; /* Rounded corners */
-    cursor: pointer; /* Cursor style */
-    transition: background-color 0.3s; /* Smooth transition */
-    font-size: 16px; /* Font size */
+    background-color: #114e13; 
+    color: white;
+    padding: 12px 20px; 
+    border: none; 
+    border-radius: 35px;
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+    font-size: 16px; 
   }
   
   .button-container button:hover {
-    background-color: #45a049; /* Darker green color on hover */
+    background-color: #45a049; 
   }
   
   @keyframes fadeIn {
@@ -59,13 +59,13 @@
   }
   
   .total-donated {
-    font-weight: bold; /* Added font weight for bold text */
+    font-weight: bold; 
   }
   
   
   .legend-text {
-    font-size: 14px; /* Increased font size for legend text */
-    font-weight: bold; /* Added bold font weight */
+    font-size: 14px;
+    font-weight: bold; 
   }
   
   
@@ -106,7 +106,6 @@
     margin-bottom: 5px;
   }
   
-  /* Add this CSS to your existing styles.css file */
   table {
     border-collapse: collapse;
     width: 100%;

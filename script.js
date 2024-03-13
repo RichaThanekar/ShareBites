@@ -7,13 +7,12 @@ const signUpButton = document.getElementById('signUp');
 const signInButton = document.getElementById('signIn');
 const loginContainer = document.querySelector('.login_container');
 
-// Initially hide the container
 container.style.display = "none";
 loginContainer.style.display = "none";
 
 showLoginBtn.addEventListener('click', () => {
 container.style.display = "block";
-// Add a delay to ensure the transition effect
+
 setTimeout(() => {
 container.classList.add("active");
 }, 10);
@@ -21,8 +20,7 @@ container.classList.add("active");
 
 showLoginBtn2.addEventListener('click', () => {
 container.style.display = "none";
-loginContainer.style.display = "block"; // Show the login container
-// Add a delay to ensure the transition effect
+loginContainer.style.display = "block"; 
 setTimeout(() => {
 container.classList.add("active");
 }, 10);
@@ -31,11 +29,11 @@ container.classList.add("active");
 closeBtns.forEach(closeBtn => {
 closeBtn.addEventListener('click', () => {
 container.classList.remove("active");
-// Add a delay to allow the transition before hiding
+
 setTimeout(() => {
   container.style.display = "none";
-  loginContainer.style.display = "none"; // Hide the login container
-}, 100); // Adjust the delay as needed
+  loginContainer.style.display = "none";
+}, 100); 
 });
 });
 
@@ -48,12 +46,12 @@ container.classList.remove("right-panel-active");
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-// JavaScript to handle smooth scrolling to the target section
+
 document.querySelectorAll('section.navbar a').forEach(anchor => {
 anchor.addEventListener('click', function (e) {
   e.preventDefault();
 
-  const targetId = this.getAttribute('href').substring(1); // Remove the '#' from the href
+  const targetId = this.getAttribute('href').substring(1); 
   const targetElement = document.getElementById(targetId);
 
   if (targetElement) {
