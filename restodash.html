@@ -162,6 +162,11 @@
                 <div class="text">DONATE FOOD</div>  
                 <div class="container" id="container">
                     <div class="form-container">
+                        <label for="Type">Type:</label>
+                        <input class="input" type="radio" id="Type" name="Type" value="veg">Veg
+                        <input class="input" type="radio" id="Type " name="Type" value="Non-Veg">Non-veg
+                        <input class="input" type="radio" id="Type" name="Type" value="Jain">Jain
+
                         <label for="foodType">Food Type:</label>
                         <input class="input" type="text" id="foodType">
                         <label for="quantity">Quantity:</label>
@@ -194,8 +199,7 @@
                         <thead>
                             <tr>
                                 <th>Food Type</th>
-                                <th>Quantity (kgs)</th>
-                                
+                                <th>Quantity (kgs)</th>   
                                 <th>Pick-up Time</th>
                                 <th>Location</th>
                                 <th>Message</th>
@@ -210,41 +214,47 @@
                
                 <script src="script1.js"></script>
                 <script>
-                  function addToInventory() {
-   
-                      const foodType = document.getElementById('foodType').value;
-                      const quantity = document.getElementById('quantity').value;
-                      
-                      const pickUpTime = document.getElementById('pickUpTime').value;
-                      const location = document.getElementById('location').value;
-                      const message = document.getElementById('message').value;
+                 function addToInventory() {
+    const foodTypeRadios = document.getElementsByName('Type');
+    let selectedFoodType = '';
 
-                      const table = document.getElementById('transactionTable').getElementsByTagName('tbody')[0];
-                      const newRow = table.insertRow();
-                      const cell1 = newRow.insertCell(0);
-                      const cell2 = newRow.insertCell(1);
-                      const cell3 = newRow.insertCell(2);
-                      const cell4 = newRow.insertCell(3);
-                      const cell5 = newRow.insertCell(4);
+    // Loop through all radio buttons to find the selected one
+    for (const radio of foodTypeRadios) {
+        if (radio.checked) {
+            selectedFoodType = radio.value;
+            break;
+        }
+    }
+
+    // Retrieve other input values
+    const foodType = selectedFoodType;
+    const quantity = document.getElementById('quantity').value;
+    const pickUpTime = document.getElementById('pickUpTime').value;
+    const location = document.getElementById('location').value;
+    const message = document.getElementById('message').value;
+
+    // Insert values into table
+    const table = document.getElementById('transactionTable').getElementsByTagName('tbody')[0];
+    const newRow = table.insertRow();
+    const cell1 = newRow.insertCell(0);
+    const cell2 = newRow.insertCell(1);
+    const cell3 = newRow.insertCell(2);
+    const cell4 = newRow.insertCell(3);
+    const cell5 = newRow.insertCell(4);
                      
-                      cell1.innerHTML = foodType;
-                      cell2.innerHTML = quantity;
-                     
-                      cell3.innerHTML = pickUpTime;
-                      cell4.innerHTML = location;
-                      cell5.innerHTML = message;
+    cell1.innerHTML = foodType;
+    cell2.innerHTML = quantity;
+    cell3.innerHTML = pickUpTime;
+    cell4.innerHTML = location;
+    cell5.innerHTML = message;
           
-                      // Clear the input fields
-                      document.getElementById('foodType').value = '';
-                      document.getElementById('quantity').value = '';
-                      
-                      document.getElementById('pickUpTime').value = '';
-                      document.getElementById('location').value = '';
-                      document.getElementById('message').value = '';
-          
-              
-                      window.dispatchEvent(new Event('storage'));
-                  }
+    // Clear the input fields
+    document.getElementById('quantity').value = '';
+    document.getElementById('pickUpTime').value = '';
+    document.getElementById('location').value = '';
+    document.getElementById('message').value = '';
+}
+
               </script>
                     </div>
                   </section>

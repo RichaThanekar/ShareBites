@@ -1,23 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Lobster&family=Lora:ital,wght@1,500&family=Play&family=Rajdhani:wght@300;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
-}@import url('https://fonts.googleapis.com/css2?family=Acme&family=Lobster&family=Lora:ital,wght@1,500&family=Play&family=Rajdhani:wght@300;700&display=swap');
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
-
+}
 body {
   font-family: monospace, sans-serif;
-  background-size:cover;
   font-family: Arial, sans-serif;
-  margin-bottom: auto;
-  padding: 0;
-  background-color: #c07826;
-  overflow-x: hidden;
-  overflow-y: hidden;
 }
-
 
 .sidebar {
   margin: 0;
@@ -219,9 +212,10 @@ body {
   border-radius: 0px;
   transition: all 0.5s ease;
 }
-.sidebar.open .profile #log_out {
-  width: 50px;
-  background: none;
+
+.sidebar.open ~ .home-section {
+  left: 250px;
+  width: calc(100% - 250px);
 }
 .home-section {
   display: none;
@@ -237,11 +231,6 @@ body {
   transition: all 0.5s ease;
   z-index: 2;
  
-}
-
-.sidebar.open ~ .home-section {
-  left: 250px;
-  width: calc(100% - 250px);
 }
 .home-section .text {
   background-color: #0c5e065c;
@@ -464,17 +453,11 @@ tbody tr:hover{
 }
 
 /**/
-body {
-  font-family: 'Roboto', sans-serif;
-  background-color: #f9f9f9;
-  margin: 0;
-  padding: 0;
-}
+
 
 .home-section {
   padding: 20px;
   margin-bottom: 20px;
-
 }
 
 .text {
