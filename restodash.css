@@ -453,8 +453,14 @@ tbody tr:hover{
 }
 
 /**/
-
-
+.logo_name img {
+  
+  width: 50px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+.logo_name.hidden {
+  display: none;
+}
 .home-section {
   padding: 20px;
   margin-bottom: 20px;

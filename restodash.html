@@ -20,10 +20,9 @@
 <body>
        <div class="sidebar">
             <div class="logo-details">
-              <div class="logo_name">
-                <a href="index.html"> <img src="./images/logo.png" alt="logo" ></a>
-              </div>
-              <i class='bx bx-menu' id="btn"></i>
+              <div class="logo_name" id="logo" style="display: none;">
+              <img src="images/logo.png" alt="">              </div>
+              <i class='bx bx-menu' id="btn"  onclick="toggleLogo() "></i>
             </div>
             <ul class="nav-list">
               <li>
@@ -213,8 +212,9 @@
                     <canvas id="chart" width="400" height="400"></canvas>
                
                 <script src="script1.js"></script>
-                <script>
+            <script>
                  function addToInventory() {
+    // Retrieve input values
     const foodTypeRadios = document.getElementsByName('Type');
     let selectedFoodType = '';
 
@@ -224,14 +224,19 @@
             selectedFoodType = radio.value;
             break;
         }
+        
     }
 
-    // Retrieve other input values
-    const foodType = selectedFoodType;
     const quantity = document.getElementById('quantity').value;
     const pickUpTime = document.getElementById('pickUpTime').value;
     const location = document.getElementById('location').value;
     const message = document.getElementById('message').value;
+
+    // Check if any field is empty
+    if (!selectedFoodType || !quantity || !pickUpTime || !location || !message) {
+        alert('Please fill in all fields');
+        return; // Stop execution if any field is empty
+    }
 
     // Insert values into table
     const table = document.getElementById('transactionTable').getElementsByTagName('tbody')[0];
@@ -242,7 +247,7 @@
     const cell4 = newRow.insertCell(3);
     const cell5 = newRow.insertCell(4);
                      
-    cell1.innerHTML = foodType;
+    cell1.innerHTML = selectedFoodType;
     cell2.innerHTML = quantity;
     cell3.innerHTML = pickUpTime;
     cell4.innerHTML = location;
@@ -254,14 +259,8 @@
     document.getElementById('location').value = '';
     document.getElementById('message').value = '';
 }
-
-              </script>
-                    </div>
-                  </section>
-
-                  
-   <script>
-        let sidebar = document.querySelector(".sidebar");
+//////////////////////////////////////////////////////
+let sidebar = document.querySelector(".sidebar");
         let closeBtn = document.querySelector("#btn");
         let searchBtn = document.querySelector(".bx-search");
         closeBtn.addEventListener("click", () => {
@@ -279,9 +278,9 @@
             closeBtn.classList.replace("bx-menu-alt-right", "bx-menu");
         }
         }
-   </script>
-   <script>
-        function showContent(id) {
+        
+////////////////////////////////////////////////////////////////////
+function showContent(id) {
             const sections = document.querySelectorAll('.home-section');
             sections.forEach(section => {
                 section.style.display = 'none'; 
@@ -290,24 +289,20 @@
             const content = document.getElementById(id);
             content.style.display = 'block'; 
         }
-   </script>
 
-   <script>
-    $('.order').click(function(e) {
-    let button = $(this);
+/////////////////////////////////////////////
+function toggleLogo() {
+  var logo = document.getElementById('logo');
+  logo.style.display = (logo.style.display === 'none') ? 'block' : 'none';
+}
 
-    if(!button.hasClass('animate')) {
-        button.addClass('animate');
-        setTimeout(() => {
-            button.removeClass('animate');
-        }, 10000);
-    }
 
-});
+              </script>
+            </div>
+      </section>
 
-   </script>
- 
-   
+                  
+
    <script>
     window.addEventListener('load', function () {
         showContent('section1'); 
