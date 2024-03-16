@@ -331,3 +331,8 @@ body {
   font-size: 60px;
   margin-top: 50px;
 }
+.logo{
+  margin: 10px;
+    height: 80px;
+    width: 250px;
+}
