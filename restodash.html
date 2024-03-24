@@ -114,18 +114,23 @@
           <div class="text">Profile</div>          
           <div class="profile-container2" style="text-align: center;">  
               <div class="profile-description">
-                  
-                  Name:<div class="profile-name" contenteditable="true" id="name">AP Shah</div>
-                  
-                  Email:<p class="profile-info"><span id="email" contenteditable="true">apshah@gmail.com</span></p>
-                  
-                  Contact Number:<p class="profile-info"><span id="phoneNumber" contenteditable="true">+91 9874563210</span></p>
-                  
-                  Address: <p id="address" contenteditable="true"></p>
-                  
-                  Types of food available:
-                  <p id="foodTypes" contenteditable="true">Veg, Non-Veg, Jain Food</p>
-                  
+                  <div class="info">
+                    <h4>Name:</h4><div class="profile-info1" contenteditable="true" id="name">AP Shah</div>
+
+                  </div>
+                  <div class="info"> 
+                    <h4>Email:</h4><p class="profile-info1" id="email" contenteditable="true">apshah@gmail.com</p>
+                  </div>
+                  <div class="info">
+                    <h4>Contact Number:</h4><p class="profile-info1" id="phoneNumber" contenteditable="true" placeholder="Contact"></p>
+                  </div>
+                  <div class="info">
+                    <h4>Address:</h4> <p class="profile-info1" id="address" contenteditable="true"></p>
+                  </div>
+                  <div class="info">
+                     <h4>Types of food available:</h4><p class="profile-info1" id="foodTypes" contenteditable="true">Veg, Non-Veg, Jain Food</p>
+                  </div>
+
                   <button onclick="saveChanges()">Save</button>
               </div> 
           </div>
@@ -135,30 +140,22 @@
     
       
       <script>
-          function saveChanges() {
-              const name = document.querySelector('.profile-name').textContent;
-              const email = document.querySelector('#email').textContent;
-              const phoneNumber = document.querySelector('#phoneNumber').textContent;
-              const address = document.querySelector('#address').textContent;
-              const foodTypes = document.querySelector('#foodTypes').textContent;
+         function saveChanges() {
+    const name = document.getElementById('name').textContent;
+    const email = document.getElementById('email').textContent;
+    const phoneNumber = document.getElementById('phoneNumber').textContent;
+    const address = document.getElementById('address').textContent;
+    const foodTypes = document.getElementById('foodTypes').textContent;
 
-              document.querySelector('.profile-name').textContent = name;
-              document.querySelector('#email').textContent = email;
-              document.querySelector('#phoneNumber').textContent = phoneNumber;
-              document.querySelector('#address').textContent = address;
-              document.querySelector('#foodTypes').textContent = foodTypes;
+    document.getElementById('profile-name').textContent = name;
+    document.getElementById('profile-email').textContent = email;
+    document.getElementById('profile-phone').textContent = phoneNumber;
+    document.getElementById('profile-address').textContent = address;
+    document.getElementById('profile-food-types').textContent = foodTypes;
 
+    alert('Changes saved successfully!');
+}
 
-               document.getElementById('profile-name').textContent = name;
-               document.getElementById('profile-email').textContent = email;
-               document.getElementById('profile-phone').textContent = phoneNumber;
-               document.getElementById('profile-address').textContent = address;
-               document.getElementById('profile-food-types').textContent = foodTypes;
-       
-      
-
-              alert('Changes saved successfully!');
-          }
       </script>
       
       

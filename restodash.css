@@ -674,25 +674,42 @@ button:hover {
     color: white;
   }
   .input {
-  border: 2px solid transparent;
-  width: 15em;
-  height: 2.5em;
-  padding-left: 0.8em;
-  outline: none;
-  overflow: hidden;
-  background-color: rgb(243, 243, 243);
-  border-radius: 10px;
-  transition: all 0.5s;
-}
-
-.input:hover,
-.input:focus {
-  border: 2px solid #278630;
-  box-shadow: 0px 0px 0px 7px rgba(74, 236, 101, 0.2);
-  background-color: white;
-}
-.radio-buttons {
-  display: flex;
-  gap:5px; /* Adjust the gap between radio buttons as needed */
-  width: 5px;
-}
+    border: 2px solid transparent;
+    width: 15em;
+    height: 2.5em;
+    padding-left: 0.8em;
+    outline: none;
+    overflow: hidden;
+    background-color: rgb(243, 243, 243);
+    border-radius: 10px;
+    transition: all 0.5s;
+  }
+  
+  .input:hover,
+  .input:focus {
+    border: 2px solid #278630;
+    box-shadow: 0px 0px 0px 7px rgba(74, 236, 101, 0.2);
+    background-color: white;
+  }
+  .radio-buttons {
+    display: flex;
+    gap:5px; /* Adjust the gap between radio buttons as needed */
+    width: 5px;
+  }
+  .profile-info1 {
+      border: 2px solid transparent;
+      width: 100%;
+      height: 100%;
+      padding-left: 0.8em;
+      outline: none;
+      overflow: hidden;
+      background-color: rgb(243, 243, 243);
+      border-radius: 10px;
+      transition: all 0.5s;
+    }
+  .profile-info1:hover,
+  .profile-info1:focus {
+    border: 2px solid #278630;
+    box-shadow: 0px 0px 0px 7px rgba(74, 236, 101, 0.2);
+    background-color: white;
+  }
